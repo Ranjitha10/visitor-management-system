@@ -1,0 +1,15 @@
+I had developed this app for my company and there was no opensource visitor badge printing apps so I thought of posting it. Any comments  / suggestions /customization contact sureshbabu.p@gmail.com
+
+
+
+The visitor pass application is designed to run in xampp under windows system >> firefox + flash plugin
+You can print visitor badge and view reports.
+1. Unpack the visitorpass.rar in to htdocs of your xampp folder.
+2. Create a db for visitor pass and replace this below string accordingly in both the files.           test.php  and \reports\visitorpassresponse.php
+    	$con = mysql_connect("localhost","test","sundar");
+	replace test with your db name and sundar with db pw.
+3. Launch app http://localhost/visitorpass/test.html 
+4. Reports : http://localhost/visitorpass/teports/visitorpassreport.php
+5. To avoid page # and other details in visitor badge --  Firefox >> File menu >> pagesetup >> margins & Header/footer >>  set all margins to 0 and all header and footer options to blank. 
+6. To replace background image - replace waterliles.jpg
+

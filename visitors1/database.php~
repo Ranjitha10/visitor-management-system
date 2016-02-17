@@ -1,0 +1,23 @@
+<?php
+	$host="localhost"; // Host name or server name
+        $username="root"; // Mysql username
+            $password="root"; // Mysql password
+            $db_name="visitormngmnt"; // Database name
+            //$tbl_name="student"; // Table name
+           
+// Open a MySQL connection
+$link =mysqli_connect($host,$username,$password,$db_name);
+if(!$link) {
+die('Connection failed: ' . $link->error());
+}
+// Create and execute a MySQL query
+$sql = "INSERT INTO visitor(name,address,gender,phno,companyname,companyid,tomeet,purpose,vehicleno,emailid,date,photo) VALUES ('$_POST[naam]','$_POST[add]','$_POST[gen]','$_POST[phnumber]','$_POST[comp]','$_POST[id]','$_POST[meet]','$_POST[pur]','$_POST[vno]','$_POST[eid]','$_POST[dt]','$_POST[ph]')";
+$result = $link->query($sql);
+ //$result = mysqli_query($link, $sql);
+if($result)
+	echo "insert success";
+else
+	echo "insert failure";
+
+mysqli_close($link);
+?>

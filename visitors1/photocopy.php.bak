@@ -1,0 +1,22 @@
+<?php
+var_dump($_GET);
+
+$con = mysql_connect("localhost","sundar","sundar");
+if (!$con)
+{
+  die('Could not connect: ' . mysql_error());
+}
+
+mysql_select_db("test", $con);
+
+//$sql = "INSERT INTO visitorinfo(";
+
+// Execute query
+//mysql_query($sql,$con);
+
+
+// some code
+
+mysql_close($con);
+
+?>
